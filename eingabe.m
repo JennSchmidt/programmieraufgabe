@@ -1,10 +1,11 @@
 % Programmieraufgabe 1
 % -------------------------------------------------------------------------
-% Dieses Scrpit ist ein Framewort, mit dem auf Dateien und
+% Dieses Scrpit ist ein Framework, mit dem auf Dateien und
 % Dateienausschnitte aus der MIT/TIMIT - Datenbank zugegriffen werden kann.
-% Diese Datenbbank ist durchsuchbar nach Aufnahmen einer Person, eines
-% Satzes, eines Wortes und eines Phonems. Dabei ist es möglich zusätzlich
-% nach Kombinationen dieser Kriterien zu suchen.
+% Diese Datenbank ist durchsuchbar nach:
+% Aufnahmen einer Person, eines Satzes, eines Wortes und eines Phonems. 
+% Dabei ist es möglich zusätzlich nach Kombinationen dieser Kriterien zu 
+% suchen.
 %
 % Nach Ausführung wird der User vom Programm, mithilfe von Abragen,
 % begleitet, um zum Ziel nach seiner Suche in dieser Datenbank zu gelangen.
