@@ -43,7 +43,7 @@ end
 
 % Pfad eingeben, in der die Datenbank vorhanden ist.
 % (Beispiel:  C:\Users\Jenn\Dropbox\Matlabprojekt\Jenn\timit)
-ausOrdner = input('\n\n Geben Sie den Pfad an, des Ordners "Gruppenaufgabe": ','s');
+ausOrdner = input('\n\nGeben Sie den Pfad des Ordners an, \nin dem die Dateien und Dateiausschnitte \naus der MIT/TIMIT-Datenbank zu finden sind: ','s');
 
 % Fehlermeldung, falls die 'AusOrdner'-Eingabe leer war
 while isempty (ausOrdner)
