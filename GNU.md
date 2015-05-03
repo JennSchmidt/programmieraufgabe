@@ -1,5 +1,5 @@
 #GNU General Public License
-Diese Informationen sind ausschlißlich der Seite (https://www.gnu.org) entnommen.
+Diese Informationen sind ausschließlich der Seite (https://www.gnu.org) entnommen.
 ##Allgemeines
 GNU ist ein unixoides Betriebssystem. Das bedeutet, dass es eine Zusammenstellung aus vielerlei Programmen ist: Anwendungen, Bibliotheken, Extras für Entwickler, sogar Spielen. Die Entwicklung von GNU begann im Januar 1984 und ist als das GNU-Projekt bekannt. Viele der in GNU enthaltenen Programme sind unter der Schirmherrschaft des GNU-Projekts freigegeben; diese nennen wir GNU-Pakete.
 
