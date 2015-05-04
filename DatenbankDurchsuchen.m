@@ -27,7 +27,7 @@ function [Ausgabe] = DatenbankDurchsuchen(gesucht, gesuchtNach, AusOrdner, vonOr
 
 cd(AusOrdner); % Es wird in den Ordner gesprungen
 
-% F�r die manuelle Durchsuchung der Ordner, werden die Variablen angepasst.
+% Für die manuelle Durchsuchung der Ordner, werden die Variablen angepasst.
 % 1. Bedingung: Wenn nur ein Ordner durchsucht werden soll
 % 2. Bedingung: Wenn von einem bestimmten Ordner bis zu einen bestimmten
 % Ordner durchsucht werden soll
@@ -37,7 +37,7 @@ else
     bisOrdner = bisOrdner+1;
 end
 
-% Nummerierung der vorhandenen Ordner von 1 bis 16, f�r den sp�teren
+% Nummerierung der vorhandenen Ordner von 1 bis 16, für den späteren
 % Zugriff
 liste{1} = 'dr1-fvmh0\';
 liste{2} = 'dr1-mcpm0\';
@@ -58,9 +58,9 @@ liste{16} = 'dr8-mbcg0\';
 
 % Anweisung, in der nach Phonemen .PHN gesucht werden soll
 if gesuchtNach == 1
-    Platz = 1; % F�r die Ausgabe wird ein Counter angelegt
+    Platz = 1; % Für die Ausgabe wird ein Counter angelegt
     
-    % Die Schleife wird so lange durchlaufen, bis alle ausgew�hlten Ordner
+    % Die Schleife wird so lange durchlaufen, bis alle ausgewählten Ordner
     % durchsucht wurden:
     while vonOrdner < bisOrdner 
         
@@ -70,20 +70,20 @@ if gesuchtNach == 1
         % Der zu durchsuchende Ordner wird nach Phonemen durchsucht und die
         % Antwort in der Ausgabe bei jedem Durchlauf einen Platz
         % weiter gespeichert, um die Ausgabe des vorherigen Durchlaufs
-        % nicht zu �berspeichern.
+        % nicht zu überspeichern.
         Ausgabe{Platz} = DurchsuchenPHN(PATH, gesucht, AusOrdner);
         
-        % vonOrdner wird hoch gez�hlt, um den n�chsten Ordner zu durchsuchen
+        % vonOrdner wird hoch gezählt, um den nächsten Ordner zu durchsuchen
         vonOrdner = vonOrdner + 1;
         
-        % Platz wird hoch gez�hlt, um die n�chste Antwort in der Ausgabe
+        % Platz wird hoch gezählt, um die nächste Antwort in der Ausgabe
         % einen Platz weiter zu speichern.
         Platz = Platz + 1;
     end
     Ausgabe = cell2mat(Ausgabe); % Die ferige Ausgabe wird generiert
 end
 
-% Anweisung, in der nach W�rtern .WRD gesucht werden soll
+% Anweisung, in der nach Wörtern .WRD gesucht werden soll
 if gesuchtNach == 2
     Platz = 1;
     while vonOrdner < bisOrdner
@@ -120,17 +120,44 @@ if gesuchtNach == 4
 end
 
 % Anweisung, in der nach allen Kriterien gesucht werden soll
-if gesuchtNach == 5
-    Platz = 1;
+if gesuchtNach == 5 
+    Platz = 1; % Für die Ausgabe wird ein Counter angelegt
+    
+    % Die Schleife wird so lange durchlaufen, bis alle ausgewählten Ordner
+    % durchsucht wurden:
     while vonOrdner < bisOrdner
         PATH = cell2mat(liste(vonOrdner)); % Zu durchsuchender Ordner
+        
+        % Ordner wird nach Phonemen durchsucht und an der Stelle der
+        % Variable "Platz" in der Ausgabe gespeichert.
         Ausgabe{Platz} = DurchsuchenPHN( PATH, gesucht, AusOrdner);
+        
+        % wird hochgezählt, um Ergebnis in der nächsten Suche nicht zu 
+        % überschreiben
         Platz = Platz + 1;
+        
+        % Ordner wird nach Wörtern durchsucht und an der Stelle der
+        % Variable "Platz" in der Ausgabe gespeichert.
         Ausgabe{Platz} = DurchsuchenWRD( PATH, gesucht, AusOrdner);
+        
+        % wird hochgezählt, um Ergebnis in der nächsten Suche nicht zu 
+        % überschreiben
         Platz = Platz + 1;
+        
+        % Ordner wird nach Texten durchsucht und an der Stelle der
+        % Variable "Platz" in der Ausgabe gespeichert.
         Ausgabe{Platz} = DurchsuchenTXT( PATH, gesucht, AusOrdner);
+        
+        % wird hochgezählt, um Ergebnis in der nächsten Suche nicht zu 
+        % überschreiben
         Platz = Platz + 1;
+        
+        % Ordner wird nach Audiodateien durchsucht und an der Stelle der
+        % Variable "Platz" in der Ausgabe gespeichert.
         Ausgabe{Platz} = DurchsuchenWAV( PATH,gesucht, AusOrdner);
+        
+        % wird hochgezählt, um Ergebnis in der nächsten Suche nicht zu 
+        % überschreiben
         Platz = Platz + 1;
         vonOrdner = vonOrdner + 1;
     end
