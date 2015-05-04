@@ -88,7 +88,7 @@ if gesuchtNach == 2
     Platz = 1;
     while vonOrdner < bisOrdner
         PATH = cell2mat(liste(vonOrdner));
-        Ausgabe{Platz} = DurchsuchenWRD( PATH, gesucht, AusOrdner);
+        Ausgabe{Platz} = DurchsuchenWRD(PATH, gesucht, AusOrdner);
         vonOrdner = vonOrdner+1;
         Platz = Platz + 1;
     end
@@ -100,7 +100,7 @@ if gesuchtNach == 3
     Platz = 1;
     while vonOrdner < bisOrdner
         PATH = cell2mat(liste(vonOrdner));
-        Ausgabe{Platz} = DurchsuchenTXT( PATH, gesucht, AusOrdner);
+        Ausgabe{Platz} = DurchsuchenTXT(PATH, gesucht, AusOrdner);
         vonOrdner = vonOrdner + 1;
         Platz = Platz + 1;
     end
@@ -112,7 +112,7 @@ if gesuchtNach == 4
     Platz = 1;
     while vonOrdner < bisOrdner
         PATH = cell2mat(liste(vonOrdner)); % Zu durchsuchender Ordner
-        Ausgabe{Platz} = DurchsuchenWAV( PATH, gesucht, AusOrdner);
+        Ausgabe{Platz} = DurchsuchenWAV(PATH, gesucht, AusOrdner);
         vonOrdner = vonOrdner + 1;
         Platz = Platz + 1;
     end
@@ -130,7 +130,7 @@ if gesuchtNach == 5
         
         % Ordner wird nach Phonemen durchsucht und an der Stelle der
         % Variable "Platz" in der Ausgabe gespeichert.
-        Ausgabe{Platz} = DurchsuchenPHN( PATH, gesucht, AusOrdner);
+        Ausgabe{Platz} = DurchsuchenPHN(PATH, gesucht, AusOrdner);
         
         % wird hochgezählt, um Ergebnis in der nächsten Suche nicht zu 
         % überschreiben
@@ -138,7 +138,7 @@ if gesuchtNach == 5
         
         % Ordner wird nach Wörtern durchsucht und an der Stelle der
         % Variable "Platz" in der Ausgabe gespeichert.
-        Ausgabe{Platz} = DurchsuchenWRD( PATH, gesucht, AusOrdner);
+        Ausgabe{Platz} = DurchsuchenWRD(PATH, gesucht, AusOrdner);
         
         % wird hochgezählt, um Ergebnis in der nächsten Suche nicht zu 
         % überschreiben
@@ -146,7 +146,7 @@ if gesuchtNach == 5
         
         % Ordner wird nach Texten durchsucht und an der Stelle der
         % Variable "Platz" in der Ausgabe gespeichert.
-        Ausgabe{Platz} = DurchsuchenTXT( PATH, gesucht, AusOrdner);
+        Ausgabe{Platz} = DurchsuchenTXT(PATH, gesucht, AusOrdner);
         
         % wird hochgezählt, um Ergebnis in der nächsten Suche nicht zu 
         % überschreiben
@@ -154,7 +154,7 @@ if gesuchtNach == 5
         
         % Ordner wird nach Audiodateien durchsucht und an der Stelle der
         % Variable "Platz" in der Ausgabe gespeichert.
-        Ausgabe{Platz} = DurchsuchenWAV( PATH,gesucht, AusOrdner);
+        Ausgabe{Platz} = DurchsuchenWAV(PATH,gesucht, AusOrdner);
         
         % wird hochgezählt, um Ergebnis in der nächsten Suche nicht zu 
         % überschreiben
