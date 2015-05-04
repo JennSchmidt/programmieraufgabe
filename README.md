@@ -57,7 +57,7 @@ geben Sie eine 2 ein und bestätigen Sie mit Enter.`
 Gibt der Anwender in diesem Fall zum Beispiel eine *6* ein, gibt das Programm folgende Fehlermeldung:
 
 `Die Eingabe war nicht korrekt. 
-Bitte geben Sie eine Zahl zwischen 1 und 2 ein! aus.`
+Bitte geben Sie eine Zahl zwischen 1 und 2 ein!`
  
 
 ## Benötigte Software
